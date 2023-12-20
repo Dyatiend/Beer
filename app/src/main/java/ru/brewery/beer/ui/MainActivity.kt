@@ -1,4 +1,4 @@
-package ru.brewery.beer
+package ru.brewery.beer.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
