@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Beer</string>
+    <string name="Beer">Пиво</string>
+    <string name="Find">Найти...</string>
+    <string name="Alcohol">Алкоголь %s\%%</string>
+    <string name="IBU">Горечь: %s</string>
+    <string name="Organic">Органическое: %s</string>
+    <string name="Style">Стиль: %s</string>
+    <string name="Description">Описание: %s</string>
 </resources>
