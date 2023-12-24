@@ -3,6 +3,7 @@ package ru.brewery.beer.ui.models
 import kotlinx.coroutines.flow.MutableStateFlow
 import ru.brewery.beer.data.domain.Order
 import ru.brewery.beer.data.domain.Sort
+import ru.brewery.beer.data.domain.SortModel
 
 data class FilterModelFlow(
     val query : MutableStateFlow<String?> = MutableStateFlow(null),
@@ -13,8 +14,7 @@ data class FilterModelFlow(
     val ibuMax : MutableStateFlow<Double?> = MutableStateFlow(null),
     val isOrganic : MutableStateFlow<Boolean?> = MutableStateFlow(null),
     val isRetired : MutableStateFlow<Boolean?> = MutableStateFlow(null),
-    val sort : MutableStateFlow<Sort?> = MutableStateFlow(null),
-    val order : MutableStateFlow<Order?> = MutableStateFlow(null)
+    val sort : MutableStateFlow<SortModel?> = MutableStateFlow(null)
 ) {
 
     fun setQuery(q : String?) {
@@ -41,11 +41,8 @@ data class FilterModelFlow(
     fun setIsRetired(r : Boolean?) {
         isRetired.value = r
     }
-    fun setSort(s : Sort?) {
-        sort.value = s
-    }
-    fun setOrder(o : Order) {
-        order.value = o
+    fun setSort(s: Sort?, o: Order?) {
+        sort.value = SortModel(s, o)
     }
 
 }

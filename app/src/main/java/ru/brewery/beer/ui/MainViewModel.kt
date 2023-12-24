@@ -10,8 +10,7 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
 import ru.brewery.beer.data.domain.BeerFilterModel
 import ru.brewery.beer.data.domain.ConfigModel
-import ru.brewery.beer.data.domain.Order
-import ru.brewery.beer.data.domain.Sort
+import ru.brewery.beer.data.domain.SortModel
 import ru.brewery.beer.data.domain.StyleModel
 import ru.brewery.beer.data.repository.BeerRepository
 import ru.brewery.beer.ui.models.FilterModelFlow
@@ -52,8 +51,7 @@ class MainViewModel(
         filter.ibuMax,
         filter.isOrganic,
         filter.isRetired,
-        filter.sort,
-        filter.order
+        filter.sort
     ) {
         BeerFilterModel(
             query = it[0] as? String,
@@ -64,8 +62,8 @@ class MainViewModel(
             ibuMax = it[5] as? Double,
             isOrganic = it[6] as? Boolean,
             isRetired = it[7] as? Boolean,
-            sort = it[8] as? Sort,
-            order = it[9] as? Order
+            sort = (it[8] as? SortModel)?.sort,
+            order = (it[8] as? SortModel)?.order
         )
     }
 
