@@ -7,4 +7,10 @@
     <string name="Organic">Органическое: %s</string>
     <string name="Style">Стиль: %s</string>
     <string name="Description">Описание: %s</string>
+    <string name="ByDefault">По умолчанию</string>
+    <string name="ByAscAlcohol">По увеличению крепкости</string>
+    <string name="ByDescAlcohol">По уменьшению крепкости</string>
+    <string name="ByAscIBU">По увеличению горькости</string>
+    <string name="ByDescIBU">По уменьшению горькости</string>
+    <string name="Sorted">Сортировать</string>
 </resources>
