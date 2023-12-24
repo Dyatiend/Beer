@@ -2,6 +2,9 @@ package ru.brewery.beer.data.domain
 
 import ru.brewery.beer.data.client.models.BeerApiModel
 
+var _id: Int = 0
+    get() = field++
+
 data class BeerModel(
     val id: String,
     val name: String,
@@ -12,7 +15,11 @@ data class BeerModel(
     val isRetired: Boolean,
     val labels: LabelsModel,
     val style: StyleModel,
-)
+) {
+
+    val __id: Int
+        get() = _id
+}
 
 fun BeerApiModel.toDomain(): BeerModel {
     return BeerModel(

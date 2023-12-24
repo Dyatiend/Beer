@@ -44,7 +44,7 @@ fun BeerLazyList(
             ) {
                 items(
                     count = beers.itemCount,
-                    key = beers.itemKey { it.id },
+                    key = beers.itemKey { it.__id },
                     contentType = beers.itemContentType { "contentType" }
                 ) {index ->
                     beers[index]?.let {
